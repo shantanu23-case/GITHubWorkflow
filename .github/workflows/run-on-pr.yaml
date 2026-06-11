@@ -5,7 +5,8 @@ on:
   workflow_dispatch:
     inputs:
       enviornment:
-      default: "DEV"
+      default: "dev"
+      required: true
 
 jobs:
   LinterChecker:
