@@ -13,4 +13,4 @@ jobs:
       
       - name: 'Install Dependencies'
         run: |
-          pip Install -r reqirements.txt
+          pip install -r reqirements.txt
