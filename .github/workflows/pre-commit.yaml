@@ -19,7 +19,7 @@ jobs:
             pre-commit --version
   Run-Pre_Commit:
     runs-on: 'ubuntu-latest'
-    needs: 'Setup_Pre_Commit-enviornment'
+    needs: Setup_Pre_Commit-enviornment
     steps:
      - name: 'RUNNING PRE-COMMIT'
        run: |
