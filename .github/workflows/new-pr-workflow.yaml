@@ -1,4 +1,4 @@
-name: "${{ github.event.pull_request.number}}"
+name: "Event"
 on:
   pull_request:
 
