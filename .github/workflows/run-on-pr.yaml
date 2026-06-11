@@ -9,8 +9,8 @@ jobs:
     runs-on: 'ubuntu-latest'
     steps:
       - name: 'Checkout'
-        uses: actions/Checkout@v4
+        uses: actions/checkout@v4
       
       - name: 'Install Dependencies'
         run: |
-          pip Install reqirement.txt
+          pip Install -r reqirements.txt
