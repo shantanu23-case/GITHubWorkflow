@@ -1,2 +1,4 @@
 flask
 pre-commit
+fastapi
+pydantic
