@@ -2,3 +2,4 @@ flask
 pre-commit
 fastapi
 pydantic
+uvicorn

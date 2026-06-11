@@ -19,7 +19,7 @@ def get_all():
 @app.get("/app/{id}")
 def get_ele_byID(id):
     for element in Dummy_data:
-        if element[id]== id:
+        if element["id"]== id:
             return element
 
 
@@ -33,5 +33,9 @@ class MyClass(BaseModel):
 def add_data(add_data: MyClass):
     for elemennt in Dummy_data:
         if elemennt["id"]==add_data.id:
-            Dummy_data.append(add_data)
-            return add_data
+            return {"message": "ID already exists"}
+        Dummy_data.append(add_data.model_dump())
+        return {
+        "message": "Data Added Successfully",
+        "data": add_data
+        }
