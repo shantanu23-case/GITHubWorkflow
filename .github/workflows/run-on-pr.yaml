@@ -3,6 +3,9 @@ on:
   push:
   pull_request:
   workflow_dispatch:
+    inputs:
+      enviornment:
+      default: "DEV"
 
 jobs:
   LinterChecker:
