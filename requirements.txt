@@ -3,3 +3,5 @@ pre-commit
 fastapi
 pydantic
 uvicorn
+pytest
+pytest-cov
