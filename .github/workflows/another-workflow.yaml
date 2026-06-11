@@ -1,7 +1,7 @@
 name: "Another Workflow"
 on:
-  pull_request
-  push
+  pull_request:
+  push:
 jobs:
   Test-Job:
   runs-on: ubuntu-latest
