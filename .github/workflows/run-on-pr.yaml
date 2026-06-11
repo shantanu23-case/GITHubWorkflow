@@ -5,12 +5,12 @@ on:
   workflow_dispatch:
 
 jobs:
-  Linter Checker:
+  LinterChecker:
     runs-on: 'ubuntu-latest'
     steps:
-      name: 'Checkout'
-      uses: actions/Checkout@v4
+      - name: 'Checkout'
+        uses: actions/Checkout@v4
       
-      name: 'Install Dependencies'
-      run: |
+      - name: 'Install Dependencies'
+        run: |
           pip Install reqirement.txt
