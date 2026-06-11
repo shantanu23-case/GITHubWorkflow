@@ -1,0 +1,30 @@
+name: 'PRE-COMMIT HOOKS CHECK'
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  Setup_Pre_Commit-enviornment:
+    runs-on: 'ubuntu-latest'
+    steps:
+     - name: 'Checkout'
+       uses: actions/checkout@v4
+
+     - name: 'Install Pre-COMMIT'
+       run: |
+            pip install -r requirements.txt
+     - name : 'Verify Pre-COMMIT'
+       run: |
+            pre-commit --version
+            
+     - name: 'RUNNING PRE-COMMIT'
+       run: |
+            pre-commit run --all-files
+  # Run-Pre_Commit:
+  #   runs-on: 'ubuntu-latest'
+  #   needs: Setup_Pre_Commit-enviornment
+  #   steps:
+  #    - name: 'RUNNING PRE-COMMIT'
+  #      run: |
+  #           pre-commit run --all-files
